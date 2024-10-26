@@ -1,0 +1,18 @@
+<div class="container mar">
+    <div class="row">
+       
+         @for (item of product; track item.id){
+        <div class="col-3 py-3 ifd">
+            <div class="card" style="width: 18rem;">
+                <img src="{{item.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="">{{item.title}}</h5>
+                  <p class="">{{item.description.slice(0,100)}}  </p>
+                  <a routerLink="/product/{{item.id}}" class="btn btn-primary">Go somewhere</a>
+
+                </div>
+              </div> 
+        </div>
+        }
+    </div>
+</div>
